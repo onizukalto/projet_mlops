@@ -11,7 +11,7 @@ WORKDIR /app
 
 # 4. Installer les dépendances du modèle + celles de l'API
 COPY model_export/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt fastapi uvicorn
+RUN pip install --no-cache-dir -r requirements.txt fastapi uvicorn prometheus-client
 
 # 5. Copier le modèle et le code
 COPY model_export ./model_export
